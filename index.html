@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/response768.css">
+    <title>new client</title>
+</head>
+
+<body>
+    <div class="disabled_main none"></div>
+
+    <div class="container">
+
+        <div class="modal none">
+            <div class="form-title"><h2 class="title_form-title">Изменить данные</h2><p class="id">ID: 123458</p> <button class="close_modal"><svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z" fill="#B0B0B0"/>
+            </svg></button></div>
+            <form action="" class="modal-form ">
+                <input type="text" class="modal-form__inp surname" data-set="surname" placeholder="Введите фамилию">
+                <input type="text" class="modal-form__inp name" data-set="name" placeholder="Введите имя">
+                <input type="text" class="modal-form__inp lastname" data-set="lastname" placeholder="Введите Отчество">
+            </form>
+            <!-- <div class="add-contacts">
+                <div class="add-number-input-cont none">
+                    <select class="select-add_contact" name="choice">
+                        <option class="em" value="Email">Email</option>
+                        <option class="num" value="number" selected>Доп. телефон</option>
+                        <option class="vk" value="VK">VK</option>
+                        <option class="fc" value="Facebook">Facebook</option>
+                      </select>
+                    <input class="inp-add_number" type="text" placeholder="Введите данные контакта">
+                </div>
+                <div class="new-cont_add-number"><img class="plus" src="./img/add_circle_outline.svg" alt="">Добавить контакт</div>
+            </div> -->
+            <div class="btn-del_container">
+                <button class="save-btn_modal-form save pointer">Сохранить</button>
+                <p class="del-btn_modal-form pointer">Удалить клиента</p>
+            </div>
+        </div>
+
+
+        <div class="modal-new-client modal none">
+            <!-- модальное окно добавления нового клиента -->
+            <h2 class="title_form-title">Новый клиент</h2>
+            <button class="close_modal btn-close-modal del-cancel-x-new pointer"><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z" fill="#F06A4D"/>
+                </svg>
+                </button>
+            <form action="" class="modal-form flex-for-form">
+                <input type="text" class="modal-form__inp surname-new" placeholder="Введите фамилию">
+                <input type="text" class="modal-form__inp name-new" placeholder="Введите имя">
+                <input type="text" class="modal-form__inp lastname-new" placeholder="Введите Отчество">
+            </form>
+            <div class="cont-for-addContact"></div>
+            <div class="cont_btn_plus"><button class="bt-plus"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_224_3502)">
+                <path d="M7.99998 4.66671C7.63331 4.66671 7.33331 4.96671 7.33331 5.33337V7.33337H5.33331C4.96665 7.33337 4.66665 7.63337 4.66665 8.00004C4.66665 8.36671 4.96665 8.66671 5.33331 8.66671H7.33331V10.6667C7.33331 11.0334 7.63331 11.3334 7.99998 11.3334C8.36665 11.3334 8.66665 11.0334 8.66665 10.6667V8.66671H10.6666C11.0333 8.66671 11.3333 8.36671 11.3333 8.00004C11.3333 7.63337 11.0333 7.33337 10.6666 7.33337H8.66665V5.33337C8.66665 4.96671 8.36665 4.66671 7.99998 4.66671ZM7.99998 1.33337C4.31998 1.33337 1.33331 4.32004 1.33331 8.00004C1.33331 11.68 4.31998 14.6667 7.99998 14.6667C11.68 14.6667 14.6666 11.68 14.6666 8.00004C14.6666 4.32004 11.68 1.33337 7.99998 1.33337ZM7.99998 13.3334C5.05998 13.3334 2.66665 10.94 2.66665 8.00004C2.66665 5.06004 5.05998 2.66671 7.99998 2.66671C10.94 2.66671 13.3333 5.06004 13.3333 8.00004C13.3333 10.94 10.94 13.3334 7.99998 13.3334Z" fill="#E6B127"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_224_3502">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                <p class="pointer">Добавить контакт</p></button></div>
+            <div class="btn-del_container">
+            <!-- кнопка отправляет данные на сервер, а также, добавляет их в объект -->
+                <button class="save-btn_modal-form save_new-client pointer">Сохранить</button>
+                <p class="del-btn_modal-form open-del-form pointer">Удалить клиента</p>
+            </div>
+        </div>
+
+        <div class="modal-edit-client modal none" id="off">
+            <!-- модальное окно добавления нового клиента -->
+            <h2 class="title_form-title">Изменить данные</h2> <p class="data-id time">13313</p>
+            <button class="close_modal btn-close-modal del-cancel-x-edit pointer"><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z" fill="#F06A4D"/>
+                </svg>
+                </button>
+            <form action="" class="modal-form-edit flex-for-form">
+                <input type="text" class="modal-form__inp surname-edit" placeholder="Введите фамилию">
+                <input type="text" class="modal-form__inp name-edit" placeholder="Введите имя">
+                <input type="text" class="modal-form__inp lastname-edit" placeholder="Введите Отчество">
+            </form>
+            <div class="cont-for-editContact"></div>
+            <div class="cont_btn_plus"><button class="bt-plus plus-edit-form"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_224_3502)">
+                <path d="M7.99998 4.66671C7.63331 4.66671 7.33331 4.96671 7.33331 5.33337V7.33337H5.33331C4.96665 7.33337 4.66665 7.63337 4.66665 8.00004C4.66665 8.36671 4.96665 8.66671 5.33331 8.66671H7.33331V10.6667C7.33331 11.0334 7.63331 11.3334 7.99998 11.3334C8.36665 11.3334 8.66665 11.0334 8.66665 10.6667V8.66671H10.6666C11.0333 8.66671 11.3333 8.36671 11.3333 8.00004C11.3333 7.63337 11.0333 7.33337 10.6666 7.33337H8.66665V5.33337C8.66665 4.96671 8.36665 4.66671 7.99998 4.66671ZM7.99998 1.33337C4.31998 1.33337 1.33331 4.32004 1.33331 8.00004C1.33331 11.68 4.31998 14.6667 7.99998 14.6667C11.68 14.6667 14.6666 11.68 14.6666 8.00004C14.6666 4.32004 11.68 1.33337 7.99998 1.33337ZM7.99998 13.3334C5.05998 13.3334 2.66665 10.94 2.66665 8.00004C2.66665 5.06004 5.05998 2.66671 7.99998 2.66671C10.94 2.66671 13.3333 5.06004 13.3333 8.00004C13.3333 10.94 10.94 13.3334 7.99998 13.3334Z" fill="#E6B127"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_224_3502">
+                <rect width="16" height="16" fill="white"/>
+                </clipPath>
+                </defs>
+                </svg>
+                <p class="pointer">Добавить контакт</p></button></div>
+            <div class="btn-del_container">
+            <!-- кнопка отправляет данные на сервер, а также, добавляет их в объект -->
+                <button class="save-btn_modal-form save_edit-client pointer">Сохранить</button>
+                <p class="del-btn_modal-form open-del-form del-edit pointer">Удалить клиента</p>
+            </div>
+        </div>
+
+
+        <div class="modal-del-client modal none">
+            <h2 class="title_form-title">Удалить клиента</h2>
+            <button class="close_modal btn-close-modal del-cancel-x"><svg width="29" height="29" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2332 7.73333L21.2665 6.76666L14.4998 13.5334L7.73318 6.7667L6.76652 7.73336L13.5332 14.5L6.76654 21.2667L7.73321 22.2333L14.4998 15.4667L21.2665 22.2334L22.2332 21.2667L15.4665 14.5L22.2332 7.73333Z" fill="#F06A4D"/>
+                </svg>
+                </button>
+            <div class="flex-center"><p class="p-del">Вы действительно хотите удалить данного клиента?</p></div>
+
+            <div class="flex-center"><button class="save-btn_modal-form del">Удалить</button></div>
+            <div class="flex-center del-cancel pointer"><p class="del-btn_modal-form">Отмена</p></div>
+        </div>
+
+        <nav>
+            <img class="logo" src="./img/logo.png" alt="">
+            <form class="nav__form-header" action="">
+                <input class="nav__inp" type="text">
+            </form>
+        </nav>
+        <section class="main">
+            <h2>Клиенты</h2>
+            <ul class="actions">
+                <li class="filter-id li-action-id li-action pointer id-pointer"  id="down" data-action="">ID<img class="arr-down filter-arrow filter-arrow-down pointer" src="" alt=""></li>
+                <li class="filter-fio li-action-fio li-action pointer fio-pointer"   id="down-fio" data-action="">Фамилия Имя Отчество<img class="arr-down-fio filter-arrow filter-arrow-down pointer" src="" alt=""></li>
+                <li class="filter-create li-action pointer li-action-create create-pointer" id="down-create" data-action="">Дата и время создания<img class="arr-down-create filter-arrow filter-arrow-down pointer" src="" alt=""></li>
+                <li class="filter-update li-action-up li-action pointer edit-pointer" id="down-update"  data-action="">Последние изменения<img class="arr-down-update filter-arrow filter-arrow-down pointer" src="" alt=""></li>
+                <li class="li-action li-action-conts"  data-action="">Контакты</li>
+                <li class="li-action"  data-action="">Действия</li>
+            </ul>
+            <div class="display">
+            </div>
+            <div class="contain-disp none"><div class="loading"><img src="./img/load.png" alt=""></div></div>
+            <div class="btn-cont"><button class="pointer add-btn">Добавить клиента</button></div>
+        </section>
+`
+    </div>
+
+
+    <script src="scriptSrm.js"></script>
+</body>
+</html>
